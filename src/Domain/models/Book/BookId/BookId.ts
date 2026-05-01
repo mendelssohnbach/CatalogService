@@ -11,11 +11,11 @@ export class BookId extends ValueObject<BookIdValue, 'BookId'> {
 
   protected validate(isbn: BookIdValue): void {
     if (isbn.length < BookId.MIN_LENGTH || isbn.length > BookId.MAX_LENGTH) {
-      throw new Error('ISBN の文字数が不正です。');
+      throw new Error('"ISBNの文字数が不正です');
     }
 
     if (!this.isValidIsbn10(isbn) && !this.isValidIsbn13(isbn)) {
-      throw new Error('不正なISBN の形式です');
+      throw new Error('不正なISBNの形式です');
     }
   }
 
