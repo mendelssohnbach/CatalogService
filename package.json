@@ -17,5 +17,11 @@
   "bugs": {
     "url": "https://github.com/mendelssohnbach/CatalogService/issues"
   },
-  "homepage": "https://github.com/mendelssohnbach/CatalogService#readme"
+  "homepage": "https://github.com/mendelssohnbach/CatalogService#readme",
+  "devDependencies": {
+    "@types/node": "^24.12.2",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.9.3"
+  }
 }
