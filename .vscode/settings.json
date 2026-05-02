@@ -158,5 +158,8 @@
   },
   "terminal.integrated.defaultProfile.linux": "bash",
   "plantuml.server": "https://www.plantuml.com/plantuml",
-  "plantuml.render": "PlantUMLServer"
+  "plantuml.render": "PlantUMLServer",
+  "github.copilot.enable": {
+    "*": false
+  }
 }
