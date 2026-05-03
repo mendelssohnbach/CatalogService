@@ -7,7 +7,7 @@ import { Title } from './Title/Title';
 export class Book {
   constructor(
     private readonly _identity: BookIdentity,
-    private _price: Price
+    private _price: Price,
   ) {}
 
   static create(identity: BookIdentity, price: Price): Book {
