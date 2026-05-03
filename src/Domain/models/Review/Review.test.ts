@@ -13,7 +13,7 @@ describe('Review', () => {
   const name = new Name('山田太郎');
   const rating = new Rating(4);
   const comment = new Comment(
-    'とても面白かったです。『実践ドメイン駆動設計』を読んだ後にこの本を読むと理解しやすいです。'
+    'とても面白かったです。『実践ドメイン駆動設計』を読んだ後にこの本を読むと理解しやすいです。',
   );
 
   describe('create', () => {
@@ -100,7 +100,7 @@ describe('Review', () => {
     test('コメントからパターンに一致する複数の推薦本を抽出できる', () => {
       // 複数の推薦本を含むコメント - パターンに確実に一致するよう調整
       const commentWithMultipleBooks = new Comment(
-        '『実践ドメイン駆動設計』を読んだ後に読むと理解しやすいです。また、前提知識として『エリック・エヴァンスのドメイン駆動設計』が必要です。'
+        '『実践ドメイン駆動設計』を読んだ後に読むと理解しやすいです。また、前提知識として『エリック・エヴァンスのドメイン駆動設計』が必要です。',
       );
 
       const review = Review.create(reviewIdentity, bookId, name, rating, commentWithMultipleBooks);
@@ -113,7 +113,7 @@ describe('Review', () => {
     test('重複する推薦本は一度だけカウントされる', () => {
       // 同じ推薦本が複数のパターンに一致するコメント - パターンに確実に一致するよう調整
       const commentWithDuplicates = new Comment(
-        '『実践ドメイン駆動設計』を読んだ後に読むと理解しやすいです。『実践ドメイン駆動設計』を先に読むことを推奨します。'
+        '『実践ドメイン駆動設計』を読んだ後に読むと理解しやすいです。『実践ドメイン駆動設計』を先に読むことを推奨します。',
       );
 
       const review = Review.create(reviewIdentity, bookId, name, rating, commentWithDuplicates);
