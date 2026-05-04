@@ -6,7 +6,7 @@ const pool = new Pool({
   host: process.env.DB_HOST || 'localhost',
   database: process.env.DB_NAME || 'localdb',
   password: process.env.DB_PASSWORD || 'password',
-  port: parseInt(process.env_DB_PORT || '5432'),
+  port: parseInt(process.env.DB_PORT || '5432'),
 });
 
 export default pool;
