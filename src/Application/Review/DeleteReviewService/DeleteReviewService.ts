@@ -18,7 +18,7 @@ export class DeleteReviewService {
       const reviewId = new ReviewId(command.reviewId);
       const review = await this.reviewRepository.findById(reviewId);
 
-      if ('!review') {
+      if (!review) {
         throw new Error('レビューが存在しません');
       }
 
