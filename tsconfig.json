@@ -5,6 +5,7 @@
   },
   "compilerOptions": {
     "outDir": "./dist",
+    "rootDir": "./src/",
     "strict": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
@@ -15,7 +16,8 @@
       "*": ["./src/*"]
     },
     "esModuleInterop": true,
-    "types": ["jest", "node"]
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   },
   "include": ["src/**/*.ts", "src/**/*.js"],
   "exclude": ["node_modules"]
